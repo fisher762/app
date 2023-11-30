@@ -17,7 +17,7 @@ namespace PixelPhoto
     {
         //Main Settings >>>>>
         //*********************************************************
-        public static string TripleDesAppServiceProvider = "8wNUQ/ugPV9CroRq8MFXLg+zGjXlqlaGqNT56QG/QB0J3OzH+kguBq5fhrNNP1bJ7YM3SRMLKB5sSDZE4UEYWoOfCLGqZlZ0BnyyzzDAGBwDIGFUQ0mSv205zqpobJ6YjoA1jhoAotGF/Mcn0SuR+Ewmi9llgx/aBGqM0yFQIlLGRsRL8MGCAybqsgZvkDJwjwvrmerSimvjT6/PHJRfANSxrGli29q0BsdQqzs9LUXYen4UhVrZcS76Fhx5Vbx/";
+        public static string TripleDesAppServiceProvider = "8wNUQ/ugPV9CroRq8MFXLsusZcZ/27TgTM1rpndn0mRM6M4Csv9a7E2x4R47UDEyG3GuV8PfvgHQ1yiJM+RLGGPsortNFHQ/K/8g2hbJHQJAsMhZCS/7roVHOjECmrGdIjjGzrnSwffMNoPu1ao2cSl5ZbWsSSQz6EDIV+FPv3ppPmuefsYCxl0YDb5MBswQMHdj12zSWvO+c1bir7GbsvURFSEeHOFja5D4zcVEvnY=";
 
         public static string Version = "2.2";
         public static string ApplicationName = "PixelPhoto";
