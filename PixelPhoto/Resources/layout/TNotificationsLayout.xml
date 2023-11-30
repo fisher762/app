@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        app:elevation="1dp" 
+        android:layout_height="wrap_content">
+      <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="top"
+        app:layout_collapseMode="pin"
+        android:elevation="2dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="@drawable/linear_gradient_drawable">
+	      <TextView
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="15"
+		      android:textSize="16sp"
+		      android:text="@string/Lbl_Notifications"
+		      android:layout_gravity="start|center"
+		      android:layout_marginStart="6dp" /> 
+      </androidx.appcompat.widget.Toolbar> 
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+	    android:id="@+id/swipeRefreshLayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+	    <RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical"> 
+		    <androidx.recyclerview.widget.RecyclerView
+			    android:id="@+id/recyler"
+			    android:clickable="true"
+			    android:focusable="false"
+			    android:focusableInTouchMode="true"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    
+			    android:scrollbars="vertical"  
+			    android:layout_marginBottom="50dp" />
+		    <com.google.android.gms.ads.AdView
+			    android:id="@+id/adView"
+			    app:adSize="SMART_BANNER"
+			    app:adUnitId="@string/banner_ad_unit_id"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="bottom"
+			    android:layout_alignParentBottom="true"
+			    android:layout_centerHorizontal="true" />
+	    </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout> 
+    <ViewStub
+        android:id="@+id/viewStub"
+        android:inflatedId="@+id/subView"
+        android:layout_marginTop="35dp"
+        android:layout_centerInParent="true" 
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout="@layout/EmptyStateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

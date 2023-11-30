@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" >
+	<PreferenceCategory  android:key="CategoryNotifications_key" android:title="@string/Lbl_ReceiveNotifications" >
+
+		<!--Liked my post-->
+		<SwitchPreferenceCompat
+			android:title="@string/Lbl_LikedMyPost"
+			android:key="LikedMyPost_key"
+			style="@style/SwitchCompatTheme"
+			app:iconSpaceReserved="false"
+			android:defaultValue="true" />
+
+		<!--Commented on my post-->
+		<SwitchPreferenceCompat
+			android:title="@string/Lbl_CommentedMyPost"
+			android:key="CommentedMyPost_key"
+			style="@style/SwitchCompatTheme"
+			app:iconSpaceReserved="false"
+			android:defaultValue="true" />
+
+		<!--Followed me-->
+		<SwitchPreferenceCompat
+			android:title="@string/Lbl_FollowedMe"
+			android:key="FollowedMe_key"
+			style="@style/SwitchCompatTheme"
+			app:iconSpaceReserved="false"
+			android:defaultValue="true" />
+
+		<!--Mentioned me-->
+		<SwitchPreferenceCompat
+			android:title="@string/Lbl_MentionedMe"
+			android:key="MentionedMe_key"
+			style="@style/SwitchCompatTheme"
+			app:iconSpaceReserved="false"
+			android:defaultValue="true" />
+
+		<CheckBoxPreference
+			android:key="checkBox_PlaySound_key"
+			android:title="@string/Lbl_Conversation_tones"
+			android:summary="@string/Lbl_Summary_Play_sounds"
+			app:iconSpaceReserved="false"
+			android:defaultValue="true" />
+
+	</PreferenceCategory>
+</PreferenceScreen>

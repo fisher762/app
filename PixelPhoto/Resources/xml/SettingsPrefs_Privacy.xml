@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" >
+	<!--Account privacy settings-->
+	<PreferenceCategory android:title="@string/Lbl_AccountPrivacySettings" >
+
+		<!--Who can view your profile?-->
+		<Preference
+			android:key="CanViewProfile_key"
+			android:title="@string/Lbl_CanViewProfile"
+			android:defaultValue="@string/Lbl_Everyone"
+			app:iconSpaceReserved="false" />
+
+		<!--Who can direct message you?-->
+		<Preference
+			android:key="CanDirectMessage_key"
+			android:title="@string/Lbl_CanDirectMessage"
+			android:defaultValue="@string/Lbl_Everyone"
+			app:iconSpaceReserved="false" />
+
+		<!--Share my location with public-->
+		<!--<AndroidX.preference.SwitchPreferenceCompat
+      android:title="@string/Lbl_ShowYourProfile"
+      android:key="ShowYourProfile_key"
+      style="@style/SwitchCompatTheme"
+      android:defaultValue="true"/>-->
+	</PreferenceCategory>
+</PreferenceScreen>

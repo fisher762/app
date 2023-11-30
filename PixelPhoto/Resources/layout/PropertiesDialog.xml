@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:orientation="vertical">
+	  
+	<LinearLayout
+		android:id="@+id/BrushSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+		android:layout_marginTop="10dp" >
+	
+		<TextView
+        android:id="@+id/txtBrushSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="@string/Lbl_brush"
+		
+		android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+	<com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/sbSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+		android:layout_marginTop="3dp"
+        app:isb_progress="20"
+		app:isb_indicator_text_size="28sp" />
+		 
+	</LinearLayout>
+	
+	<LinearLayout
+		android:id="@+id/Opacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+	    android:layout_marginTop="32dp" >
+
+		 <TextView
+             android:id="@+id/txtOpacity"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/Lbl_Opacity"
+			 
+			 android:textSize="16sp"
+             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+       <com.warkiz.widget.IndicatorSeekBar
+             android:id="@+id/sbOpacity"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginEnd="8dp"
+             android:layout_marginStart="5dp"
+			 android:layout_marginTop="3dp"
+             app:isb_progress="100"
+ 	         app:isb_indicator_text_size="20sp" />
+        
+		</LinearLayout>
+
+     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvColors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        
+        tools:background="@android:color/black"
+        tools:listitem="@layout/color_picker_item_list" />
+
+</LinearLayout>

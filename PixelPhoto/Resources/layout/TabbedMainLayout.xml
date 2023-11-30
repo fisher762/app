@@ -1,0 +1,62 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- top toolbar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout1" />
+        <!-- Middle section (body) -->
+        <FrameLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1" />
+        <com.hitomi.cmlibrary.CircleMenu
+            android:id="@+id/circle_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/circleMenuBackground"
+            android:layout_centerInParent="true" />
+        <include
+            android:id="@+id/aDashBoard_bottomBar"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            layout="@layout/customnavigetionbar" />
+        <FrameLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/custom_ripple"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="bottom|center"
+            android:foregroundGravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/FloatingAction"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/circlegradient">
+            <ImageView
+                android:id="@+id/Image"
+                android:layout_gravity="center"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:tint="@color/white"
+                android:src="@drawable/icon_plus_vector"
+                android:gravity="center" />
+        </FrameLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

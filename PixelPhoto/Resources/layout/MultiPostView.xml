@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="0dp"
+    android:background="?attr/colorPrimary"
+    android:paddingBottom="5dp">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:theme="@style/ToolbarTheme"
+        android:layout_gravity="top"
+        app:layout_collapseMode="pin"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:background="@drawable/linear_gradient_drawable"
+        android:elevation="2dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/countlayout"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/followButton"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+				app:cardBackgroundColor="?attr/ShapeCircleColor6"
+                android:elevation="0dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardPreventCornerOverlap="true"
+                android:paddingBottom="0dp"
+                android:padding="0dp"> 
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+	                <!--Including User Post Owner Layout -->
+                    <include
+                        android:id="@+id/postOwnerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/toppostuserview"
+                        android:layout_alignParentTop="true" />
+                    <!--Including Post Actions -->
+                    <include
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/postactionlayout"
+                        android:layout_below="@+id/layout_stub" /> 
+	                <com.airbnb.lottie.LottieAnimationView
+		                android:id="@+id/animation_like"
+		                android:scaleType="fitCenter"
+		                android:layout_height="76dp"
+		                android:padding="0dp" 
+		                app:lottie_loop="false"
+		                android:layout_width="76dp"
+		                android:layout_centerInParent="true" /> 
+                    <LinearLayout
+                        android:id="@+id/layout_stub" 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp" 
+                        android:layout_marginBottom="5dp"
+						android:orientation="vertical"
+                        android:layout_below="@+id/postOwnerLayout" /> 
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecylerComment"
+                android:layout_below="@+id/ViewMoreComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_marginTop="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

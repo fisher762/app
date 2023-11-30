@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "391051718414",
+    "firebase_url": "https://pixelphoto-1c5f8.firebaseio.com",
+    "project_id": "pixelphoto-1c5f8",
+    "storage_bucket": "pixelphoto-1c5f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391051718414:android:9053ebae8cb13457",
+        "android_client_info": {
+          "package_name": "com.PixelPhoto.Social"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391051718414-7nomjd2h9ipo0qsn697viifn33uav8f8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.PixelPhoto.Social",
+            "certificate_hash": "6775bca90428b86dbc119f508a61e5de039047c7"
+          }
+        },
+        {
+          "client_id": "391051718414-1g6obup22in7fbscj00baacdjsq1c1qs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkkrHLMhFis9xv4J-iDLW_LYQ4aibpF_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391051718414-1g6obup22in7fbscj00baacdjsq1c1qs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-5135691635931982~4067045820"
+    }
+  ],
+  "configuration_version": "1"
+}

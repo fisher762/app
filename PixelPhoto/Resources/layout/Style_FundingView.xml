@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainliner_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:clickable="true"
+    
+    android:paddingBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:paddingTop="5dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/Image"
+        android:scaleType="centerCrop"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:src="@drawable/ImagePlacholder"
+        android:focusableInTouchMode="false" />
+    <LinearLayout
+        android:id="@+id/info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:orientation="vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="7dp"
+        android:focusable="false"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:lines="2"
+            android:layout_marginEnd="3dp"
+            android:textStyle="bold"            
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:lines="1"
+            android:textColor="@color/text_color_in_between"
+            android:textSize="12dp"
+            android:layout_marginTop="1dp" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:indeterminate="false"
+            android:gravity="center"
+            android:max="100"
+            android:minHeight="50dp"
+            android:minWidth="200dp"
+            android:progressTint="@color/accent"
+            android:secondaryProgressTint="@color/accent" 
+            android:progress="55"  
+            android:secondaryProgress="100"/>
+    </LinearLayout>
+</LinearLayout>

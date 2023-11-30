@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	
+    android:orientation="vertical"
+	android:id="@+id/root"
+    android:layout_height="match_parent">
+    <LinearLayout
+		
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:theme="@style/ToolbarTheme"
+            android:layout_gravity="top"
+            app:layout_collapseMode="pin"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:background="@drawable/linear_gradient_drawable"
+            android:elevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/viewbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/Lbl_Reply"
+                    android:layout_weight="15"
+                    android:padding="4dp"
+                    android:textColor="@color/text_color_in_between"
+                    android:textSize="14sp"
+                    android:layout_gravity="start|center"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="15dp" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <include
+            android:id="@+id/IncludedComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/Style_Comment" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyler"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="40dp" />
+		 <ViewStub	
+			android:id="@+id/viewStub"
+            android:inflatedId="@+id/subView"
+            android:layout="@layout/EmptyStateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:id="@+id/divider2"
+            android:layout_weight="0" />
+    </LinearLayout>
+	 <RelativeLayout
+        android:id="@+id/commentonButtom"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="?attr/colorBackground"
+		android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layoutDirection="ltr">
+        <ImageView
+            android:id="@+id/emojiicon"
+            android:layout_width="26dp"
+            android:layout_height="30dp"
+            android:src="@drawable/Smile"
+            android:scaleType="fitCenter"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="8dp" />
+        <developer.semojis.Helper.EmojiconEditText
+            android:id="@+id/EmojiconEditText5"
+            android:layout_alignWithParentIfMissing="@+id/emojiicon"
+            android:layout_toEndOf="@+id/emojiicon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp" 
+            android:textSize="14dp"
+            android:hint="@string/Lbl_YourComment"
+            app:emojiconSize="23sp"
+            android:backgroundTint="@android:color/transparent"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:maxLines="6"
+			android:textColorHint="@color/text_color_in_between"
+		    android:textColor="@color/text_color_in_between"
+            android:layout_marginEnd="40dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="70dp" />
+        <at.markushi.ui.CircleButton
+            android:layout_alignWithParentIfMissing="@+id/EmojiconEditText5"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentEnd="true" 
+            android:layout_centerVertical="true"
+            app:cb_color="?attr/colorBackground"
+            app:cb_pressedRingWidth="5dip"
+            android:tint="@color/accent"
+            android:src="@drawable/ic_action_send_now"
+            android:padding="6dp"
+            android:id="@+id/sendButton"
+            android:translationY="2dp"
+            android:layoutDirection="ltr" />
+    </RelativeLayout>
+
+</RelativeLayout>

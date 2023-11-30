@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" 
+              android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+	        android:id="@+id/toolbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="48dp"
+	        app:theme="@style/ToolbarTheme"
+	        android:layout_gravity="top"
+	        app:layout_collapseMode="pin"
+	        app:titleTextAppearance="@style/Toolbar.TitleText"
+	        android:background="@drawable/linear_gradient_drawable"
+	        android:elevation="2dp">
+	        <ImageView
+		        android:id="@+id/imageAvatar"
+		        android:layout_width="40dp"
+		        android:layout_height="40dp"
+		        android:src="@drawable/no_profile_image_circle"
+		        android:scaleType="centerCrop" />
+	        <View
+		        android:layout_width="10dp"
+		        android:layout_height="0dp" />
+	        <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical">
+		        <TextView
+			        android:id="@+id/username"
+			        android:textSize="15sp"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"/>
+		        <TextView
+			        android:id="@+id/time"
+			        android:textSize="15sp"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+            </LinearLayout>
+	        <ImageView
+		        android:id="@+id/moreButton"
+		        android:background="@drawable/custom_ripple"
+		        android:layout_alignParentEnd="true"
+		        android:rotation="90"
+		        android:layout_marginEnd="5dp"
+		        android:layout_gravity="end|center"
+		        android:gravity="end|center"
+		        android:padding="2dp"
+		        android:tint="@color/text_color_in_between"
+		        android:src="@drawable/icon_more_dots_vector"
+		        android:layout_centerVertical="true"
+		        android:layout_width="18dp"
+		        android:layout_height="18dp" /> 
+        </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:textSize="19sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:layout_margin="15dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/imageFunding"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imageplacholder"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                 />
+			 <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:indeterminate="false"
+                    android:gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:progressTint="@color/accent"
+                    android:secondaryProgressTint="@color/accent" 
+                    android:max="100" 
+                    android:minHeight="50dp"
+                    android:minWidth="200dp" 
+                    android:progress="55"  
+                    android:secondaryProgress="100"/>
+                <TextView
+                    android:id="@+id/fund_raise"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:gravity="top|center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                     />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+			   <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+			<Button
+				android:id="@+id/DonateButton"
+                android:layout_below="@+id/Resetbutton"
+                android:background="@drawable/Shape_Radius"
+                android:layout_height="36dp"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:text="@string/Lbl_Donate"
+                android:textColor="@color/textLight_color"
+                android:textSize="12sp"
+                android:clickable="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="19dp"
+                android:gravity="center"
+                android:layout_marginBottom="10dp" />
+			    <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp" />
+            <!--recent donations Section-->
+            <LinearLayout
+	            android:id="@+id/layout_recent_donations"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+				android:visibility="gone"
+	            android:layout_marginTop="5dp"
+	            android:orientation="vertical">
+	            <View
+		            android:layout_width="match_parent"
+		            android:layout_height="1dp"
+		            android:layout_marginTop="10dp"
+		            android:background="?attr/colorDivider" />
+	            <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:paddingBottom="10dp"
+		            android:textStyle="bold"
+		            android:paddingTop="15dp"
+		            android:text="@string/Lbl_RecentDonations"
+		            android:textSize="16sp" />  
+	            <androidx.recyclerview.widget.RecyclerView
+		            android:id="@+id/recycler"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:scrollbars="vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

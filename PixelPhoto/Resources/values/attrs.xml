@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<declare-styleable name="ExtraTheme">
+		<attr name="colorBackground" format="reference|color"/>
+		<attr name="circleMenuBackground" format="reference|color"/>
+		<attr name="colorReact" format="reference|color"/>
+		<attr name="colorDivider" format="reference|color"/>
+		<attr name="ShapeCircleColor1" format="reference|color"/>
+		<attr name="ShapeCircleColor2" format="reference|color"/>
+		<attr name="ShapeCircleColor3" format="reference|color"/>
+		<attr name="ShapeCircleColor4" format="reference|color"/>
+		<attr name="ShapeCircleColor5" format="reference|color"/>
+		<attr name="ShapeCircleColor6" format="reference|color"/>
+	</declare-styleable>
+
+
+	<declare-styleable name="TemplateView">
+		<attr name="gnt_template_type" format="reference"/>
+	</declare-styleable>
+
+	<declare-styleable name="InsLoadingViewAttr">
+		<attr name="rotate_duration" format="integer" />
+		<attr name="circle_duration" format="integer" />
+		<attr name="start_color" format="color" />
+		<attr name="end_color" format="color" />
+		<attr name="status" >
+			<enum name="loading" value="0" />
+			<enum name="clicked" value="1" />
+			<enum name="unclicked" value="2" />
+		</attr>
+	</declare-styleable>
+
+	<declare-styleable name="StoriesProgressView">
+		<attr name="progressCount" format="integer|reference" />
+	</declare-styleable>
+
+</resources>

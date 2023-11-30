@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        app:elevation="1dp"
+        
+        android:layout_height="wrap_content">
+      <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="top"
+        app:layout_collapseMode="pin"
+        android:elevation="2dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="@drawable/linear_gradient_drawable">
+        <LinearLayout
+          android:id="@+id/cardHeader"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"   
+          android:weightSum="8"
+          android:orientation="horizontal">
+          <AutoCompleteTextView
+            android:id="@+id/searchViewBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:focusable="false"
+            android:layout_weight="1"
+            android:focusableInTouchMode="false"
+            android:drawableStart="@drawable/icon_search_vector"
+            android:drawableTint="?attr/colorReact"
+            android:layout_gravity="center_vertical"
+            android:hint="@string/Lbl_Search"
+			android:textColorHint="?attr/colorReact"
+            android:textSize="19dp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:layout_margin="10.2dp"
+            android:drawablePadding="13dp" />
+          <ImageView
+            android:id="@+id/shoppingButton"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" 
+            android:tint="?attr/colorReact"
+            android:src="@drawable/icon_shopping_bag"
+            android:layout_weight="7"
+            android:layout_gravity="end|center"
+            android:gravity="end|center"
+            android:padding="5dp"
+            android:layout_marginEnd="10dp" />
+        </LinearLayout>
+      </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/material_style_ptr_frame"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyler"
+            android:clickable="true"
+            android:focusable="false" 
+            android:paddingStart="5dp"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent" 
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary" 
+            
+            android:scrollbars="vertical" />
+    </com.liaoinstan.springview.widget.SpringView>
+  <ProgressBar
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:id="@+id/sectionProgress"
+    android:layout_width="50dp"
+    android:layout_height="50dp" /> 
+    <ViewStub
+        android:id="@+id/viewStub"
+        android:inflatedId="@+id/subView"
+        android:layout_marginTop="35dp"
+        android:layout_centerInParent="true" 
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout="@layout/EmptyStateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

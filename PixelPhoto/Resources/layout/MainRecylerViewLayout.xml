@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:theme="@style/ToolbarTheme"
+        android:layout_gravity="top"
+        app:layout_collapseMode="pin"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:background="@drawable/linear_gradient_drawable"
+        android:elevation="2dp"> 
+	    <LinearLayout
+		    android:id="@+id/sortLayout"
+			android:orientation="horizontal"
+		    android:layout_width="wrap_content"
+			android:visibility="gone"
+		    android:layout_height="30dp" 
+		    android:layout_marginTop="2dp"
+		    android:layout_marginEnd="10dp"
+		    android:layout_gravity="end"
+		    android:layout_marginBottom="2dp">
+		    <ImageView
+			    android:id="@+id/grid_pic"
+			    android:layout_width="20dp"
+			    android:layout_height="20dp"
+			    android:layout_marginBottom="2dp"
+			    android:layout_marginStart="15dp"
+			    android:layout_marginTop="8dp"
+			    android:tint="@color/text_color_in_between"
+			    android:src="@drawable/icon_grid_post_vector" />
+		    <ImageView
+			    android:id="@+id/menu_pic"
+			    android:layout_toEndOf="@+id/grid_pic"
+			    android:layout_width="20dp"
+			    android:layout_height="20dp"
+			    android:layout_marginBottom="2dp"
+			    android:layout_marginStart="20dp"
+			    android:layout_marginTop="8dp"
+			    android:tint="@color/text_color_in_between"
+			    android:src="@drawable/icon_menu_post_vector" /> 
+	    </LinearLayout> 
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.liaoinstan.springview.widget.SpringView
+                android:id="@+id/material_style_ptr_frame"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <PixelPhoto.Activities.Posts.Extras.PRecyclerView
+                    android:id="@+id/HashtagRecyler"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" 
+                    android:background="?attr/colorPrimary"
+                    android:layout_marginTop="-4dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="-5dp" />
+            </com.liaoinstan.springview.widget.SpringView>
+            <ViewStub
+                android:id="@+id/viewStub"
+                android:inflatedId="@+id/subView"
+                android:layout_marginTop="45dp"
+                android:layout="@layout/EmptyStateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:id="@+id/sectionProgress"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

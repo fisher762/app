@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9E9E9E">
+	    	 
+		<PixelPhoto.NiceArt.NiceArtEditorView
+			android:id="@+id/NiceArtView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+	        android:paddingBottom="20dp"
+	        android:gravity="center"
+	        android:layout_gravity="center"
+	        android:layout_centerInParent="true"/>
+     
+		<LinearLayout
+			 android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/textLight_color"
+             android:layout_alignParentBottom="true"
+             android:gravity="center_horizontal|bottom"
+             android:layout_gravity="center_horizontal|bottom"
+	     	 android:orientation="vertical" >
+	   	  
+		<com.warkiz.widget.IndicatorSeekBar
+			android:id="@+id/sbRotate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:isb_progress="0"
+			app:isb_max="100"
+            app:isb_min="0"
+	     	app:isb_indicator_text_size="20sp"/>
+
+			<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/rvConstraintTools"
+					android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/textLight_color"
+                    android:orientation="horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+			        
+                    tools:listitem="@layout/row_editing_tools" />
+
+			<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/rvFilterView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tool_bg"
+                    android:orientation="horizontal"
+					android:layout_above="@id/rvConstraintTools"
+                    
+                    tools:listitem="@layout/row_filter_view" /> 
+
+		 <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/add_text_color_picker_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            
+            tools:background="@color/white"
+            tools:listitem="@layout/color_picker_item_list" />
+		  
+		</LinearLayout>
+	     
+		<LinearLayout
+			android:id="@+id/Headerview"
+			android:layout_width="match_parent"
+			android:layout_height="45dp"
+			android:orientation="horizontal"
+			android:background="#80000000">
+	 
+			<ImageView
+	 			android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:padding="10dp"
+                android:textSize="20sp"	
+                android:src="@drawable/ic_close"	
+	 	    	android:gravity="center_vertical"/>
+	 	   
+	 	<RelativeLayout
+	 		 android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+	 		 android:gravity="end"
+	 		 android:layout_gravity="end" >
+	 	
+			 <TextView
+                android:id="@+id/imgSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+				android:padding="10dp"
+                android:textColor="@color/textLight_color"
+                android:text="@string/Lbl_Save"
+			    android:textSize="16sp" />
+	 		 
+			</RelativeLayout>
+	  	 
+		</LinearLayout>  
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_marginTop="10dp">
+
+		<ImageView
+			android:id="@+id/imgdeleteall"
+            android:layout_width="50dp"
+            android:layout_height="30dp" 
+            android:src="@drawable/ic_action_delete_all"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+		/>
+		
+		<ImageView
+			android:id="@+id/imgUndo"
+            android:layout_width="50dp"
+            android:layout_height="30dp" 
+            android:src="@drawable/ic_action_undo_back"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+		/>
+
+		<ImageView
+			android:id="@+id/imgRedo"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+			 android:layout_marginStart="10dp"
+			 android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_action_redo_back" />		
+		 
+	</LinearLayout> 
+	 
+</RelativeLayout>
